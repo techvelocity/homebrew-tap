@@ -2,12 +2,12 @@
 class Mprod < Formula
   desc ""
   homepage ""
-  version "0.0.0-rc0"
+  version "0.0.0-rc1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://releases.velocity.tech/mprod/v0.0.0-rc0/mprod_0.0.0-rc0_Darwin_x86_64.tar.gz"
-    sha256 "b06fa81a83f3cac41201e0d187acdcc0d4003b52757d09a9638b8e52285b7313"
+    url "https://releases.velocity.tech/mprod/v0.0.0-rc1/mprod_0.0.0-rc1_Darwin_x86_64.tar.gz"
+    sha256 "3227c790132f1a3bcfb7f3db573120ca8217457e6a8ac052f02578870bb1d645"
   end
 
   def install
