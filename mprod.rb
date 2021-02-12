@@ -5,16 +5,16 @@
 class Mprod < Formula
   desc ""
   homepage ""
-  version "0.0.1-rc4"
+  version "0.0.1-rc5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://releases.velocity.tech/mprod/v0.0.1-rc4/mprod_0.0.1-rc4_Darwin_x86_64.tar.gz"
-    sha256 "4bd275046000b2d66a2a2ec7747104ef84c827ddf4dd090d0c8b954596862732"
+    url "https://releases.velocity.tech/mprod/v0.0.1-rc5/mprod_0.0.1-rc5_Darwin_x86_64.tar.gz"
+    sha256 "1ea7cf9fa467ffa75c4cff2a802b4690480e3be493cf10780363b69f9bcf7fde"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://releases.velocity.tech/mprod/v0.0.1-rc4/mprod_0.0.1-rc4_Linux_x86_64.tar.gz"
-    sha256 "f0a9ff45b7ce8a29398a2952469d6b90f2442a332fbd5df7be2d37a7029efb7e"
+    url "https://releases.velocity.tech/mprod/v0.0.1-rc5/mprod_0.0.1-rc5_Linux_x86_64.tar.gz"
+    sha256 "d16f6e7c209b2b2d9fed491cac5cc51e8b4e6c9c918d8624d1ea826b90fa8596"
   end
 
   def install
