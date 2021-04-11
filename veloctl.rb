@@ -5,16 +5,16 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.0.6"
+  version "0.0.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://releases.velocity.tech/veloctl/v0.0.6/veloctl_0.0.6_Darwin_x86_64.tar.gz"
-    sha256 "b6bddaf1220a1febd453498097959be606b01a70514ae18d1564abba2ed9b0f5"
+    url "https://releases.velocity.tech/veloctl/v0.0.7/veloctl_0.0.7_Darwin_x86_64.tar.gz"
+    sha256 "0b9441180cded5d3c9a0061feda17268ec13a761ddb29c560a7f2e12eb33ba59"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://releases.velocity.tech/veloctl/v0.0.6/veloctl_0.0.6_Linux_x86_64.tar.gz"
-    sha256 "d84a5847c63a80597845c022ed1c0a4531c9ad3c21d249139be0e282c7b83437"
+    url "https://releases.velocity.tech/veloctl/v0.0.7/veloctl_0.0.7_Linux_x86_64.tar.gz"
+    sha256 "2fdaca4f1c5c18cae31b387c244e1aacb36e949af357d330107e9cab1b587e76"
   end
 
   def install
