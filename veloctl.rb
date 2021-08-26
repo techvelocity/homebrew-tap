@@ -5,28 +5,28 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.3.4"
+  version "0.3.5"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.4/veloctl_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "067aa837313b14753aff30c1c5e156e314cbafb13aa08307c01158c74b7e502a"
+      url "https://releases.velocity.tech/veloctl/v0.3.5/veloctl_0.3.5_Darwin_x86_64.tar.gz"
+      sha256 "7a7f5700d12a826bcf6acdb2a0adf9cfac6ad109ebc9369dffb2f2c75a58dd8c"
     end
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.3.4/veloctl_0.3.4_Darwin_arm64.tar.gz"
-      sha256 "b9ce52e42916721416b5a028b59fb1b0988a046d9b71c64d4d02e20f6600a2d8"
+      url "https://releases.velocity.tech/veloctl/v0.3.5/veloctl_0.3.5_Darwin_arm64.tar.gz"
+      sha256 "33f06e2863c5794a1d86451babb85db7d95fd3119d083766cfc3e29dc5603a6e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.4/veloctl_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "e12798e36540159f8a9cca1677e2acd64f443b308a44198389525af43c547846"
+      url "https://releases.velocity.tech/veloctl/v0.3.5/veloctl_0.3.5_Linux_x86_64.tar.gz"
+      sha256 "6f26b7246a59b5a21e621801cf4e96be799d55fe3deb61eda6128302517db67e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.3.4/veloctl_0.3.4_Linux_arm64.tar.gz"
-      sha256 "2b7a2b60a33b36fb6905b14849d9eedb2fa1fb719b125f4bc31151ee7950fd51"
+      url "https://releases.velocity.tech/veloctl/v0.3.5/veloctl_0.3.5_Linux_arm64.tar.gz"
+      sha256 "ad47015879ad42285f491392149397faea4f1a9b872a514f0a822b7d69ca601b"
     end
   end
 
