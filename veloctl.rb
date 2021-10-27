@@ -5,42 +5,80 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.3.8"
-  bottle :unneeded
+  version "0.3.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.8/veloctl_0.3.8_Darwin_x86_64.tar.gz"
-      sha256 "cf578f3113e81a716d7e6461c5c9083e3ac3bc9c34b147f0eadb4a84d8947151"
-    end
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.3.8/veloctl_0.3.8_Darwin_arm64.tar.gz"
-      sha256 "dcc12aa325acff1315a79f27b8bccd078a503e67bc78e39224b13b880a8f9d69"
+      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Darwin_arm64.tar.gz"
+      sha256 "3faeb8ee4b51a19bdcdbf377fbcfc9ad7282b41ec61d56e994df8a1a2b3a5cec"
+
+      def install
+        bin.install "veloctl"
+
+        system bin/"veloctl completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "veloctl"
+
+        system bin/"veloctl completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+
+        system bin/"veloctl completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "veloctl.fish"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Darwin_x86_64.tar.gz"
+      sha256 "a4a7d85d9974d3e2752c3fae18627e413f8379af0e0eb4a89b9448fdb30c75e9"
+
+      def install
+        bin.install "veloctl"
+
+        system bin/"veloctl completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "veloctl"
+
+        system bin/"veloctl completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+
+        system bin/"veloctl completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "veloctl.fish"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.8/veloctl_0.3.8_Linux_x86_64.tar.gz"
-      sha256 "52c7056f216c09a4d170d0b284123ae331080fd15fef3b00bba937a3c1cb5ea3"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.3.8/veloctl_0.3.8_Linux_arm64.tar.gz"
-      sha256 "639f5eff1fb06740f45c88dd5c7d7b3b92261c5e452a2b3864899d46faab89f9"
+      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Linux_arm64.tar.gz"
+      sha256 "e27c1b100dfd0f5ad543ae86fd116d08ebba76df8703fa25b85f102b6e1fa78e"
+
+      def install
+        bin.install "veloctl"
+
+        system bin/"veloctl completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "veloctl"
+
+        system bin/"veloctl completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+
+        system bin/"veloctl completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "veloctl.fish"
+      end
     end
-  end
+    if Hardware::CPU.intel?
+      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Linux_x86_64.tar.gz"
+      sha256 "ccfda7b1ad8a9dfefc5af78249a05acb8e31dfd99fa4aca95d499c7090b415bf"
 
-  def install
-    bin.install "veloctl"
+      def install
+        bin.install "veloctl"
 
-    system bin/"veloctl completion bash > bash_completion.bash"
-    bash_completion.install "bash_completion.bash" => "veloctl"
+        system bin/"veloctl completion bash > bash_completion.bash"
+        bash_completion.install "bash_completion.bash" => "veloctl"
 
-    system bin/"veloctl completion zsh > zsh_completion.zsh"
-    zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+        system bin/"veloctl completion zsh > zsh_completion.zsh"
+        zsh_completion.install "zsh_completion.zsh" => "_veloctl"
 
-    system bin/"veloctl completion fish > fish_completion.fish"
-    fish_completion.install "fish_completion.fish" => "veloctl.fish"
+        system bin/"veloctl completion fish > fish_completion.fish"
+        fish_completion.install "fish_completion.fish" => "veloctl.fish"
+      end
+    end
   end
 
   test do
