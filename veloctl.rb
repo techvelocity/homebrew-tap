@@ -5,12 +5,12 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.3.9"
+  version "0.3.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Darwin_arm64.tar.gz"
-      sha256 "3faeb8ee4b51a19bdcdbf377fbcfc9ad7282b41ec61d56e994df8a1a2b3a5cec"
+      url "https://releases.velocity.tech/veloctl/v0.3.10/veloctl_0.3.10_Darwin_arm64.tar.gz"
+      sha256 "688ee51934a23c0dc2b62a66a4112f2d9cf40083331a2eb32523fb9550c51c0e"
 
       def install
         bin.install "veloctl"
@@ -26,8 +26,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Darwin_x86_64.tar.gz"
-      sha256 "a4a7d85d9974d3e2752c3fae18627e413f8379af0e0eb4a89b9448fdb30c75e9"
+      url "https://releases.velocity.tech/veloctl/v0.3.10/veloctl_0.3.10_Darwin_x86_64.tar.gz"
+      sha256 "6deda77b5d09f3df4f356a1046b2bfa9241ec255a4d5a8ba4354eafeba99208e"
 
       def install
         bin.install "veloctl"
@@ -46,8 +46,8 @@ class Veloctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Linux_arm64.tar.gz"
-      sha256 "e27c1b100dfd0f5ad543ae86fd116d08ebba76df8703fa25b85f102b6e1fa78e"
+      url "https://releases.velocity.tech/veloctl/v0.3.10/veloctl_0.3.10_Linux_arm64.tar.gz"
+      sha256 "474449ccfb0209e89a8f3b679e7a467a58fd4d2f23532b74d3d033215a1786b5"
 
       def install
         bin.install "veloctl"
@@ -63,8 +63,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.3.9/veloctl_0.3.9_Linux_x86_64.tar.gz"
-      sha256 "ccfda7b1ad8a9dfefc5af78249a05acb8e31dfd99fa4aca95d499c7090b415bf"
+      url "https://releases.velocity.tech/veloctl/v0.3.10/veloctl_0.3.10_Linux_x86_64.tar.gz"
+      sha256 "1dd49d8ad81e89161147212e82358f652b0abb2153464e5c867d40d54ee658b4"
 
       def install
         bin.install "veloctl"
