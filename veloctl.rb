@@ -5,12 +5,12 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.4.0/veloctl_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "31df5890ebe10d00f3cda756d03903129c80330848222fd17fa427829a19a276"
+      url "https://releases.velocity.tech/veloctl/v0.4.1/veloctl_0.4.1_Darwin_arm64.tar.gz"
+      sha256 "470e81df23a224dd7e7bc2454df2429b0a1f1641e106d8c613bf077cca66e30f"
 
       def install
         bin.install "veloctl"
@@ -26,8 +26,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.4.0/veloctl_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "a8caa578f860e2fd5bdee91d582c41cdec9c98f9e34f4cc0d8048eb929985e0e"
+      url "https://releases.velocity.tech/veloctl/v0.4.1/veloctl_0.4.1_Darwin_x86_64.tar.gz"
+      sha256 "b1e4188a777ccec0ea7cbbc18c0cd535cfba2d04acc8b6d84ad17358f1dc45b5"
 
       def install
         bin.install "veloctl"
@@ -46,8 +46,8 @@ class Veloctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.4.0/veloctl_0.4.0_Linux_arm64.tar.gz"
-      sha256 "eecd1c1bfb7ed23f720e0f41853477ca7c7c1544bb3454a4dcde6ea80a15cd08"
+      url "https://releases.velocity.tech/veloctl/v0.4.1/veloctl_0.4.1_Linux_arm64.tar.gz"
+      sha256 "091f70475cbb8a17e9b76e759501374cdab9c28938da5dbc63fe9a7010b4e90a"
 
       def install
         bin.install "veloctl"
@@ -63,8 +63,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.4.0/veloctl_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "0070afe7f2a3e8d551e08a78b2c940399689a6ecfb2777d759e1f9f77b5c4de8"
+      url "https://releases.velocity.tech/veloctl/v0.4.1/veloctl_0.4.1_Linux_x86_64.tar.gz"
+      sha256 "85c47a89eb3ea9c43c4a70d6dc70e97a9b7d323234edf24462934bdb067139d5"
 
       def install
         bin.install "veloctl"
