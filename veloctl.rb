@@ -5,12 +5,12 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.4.6"
+  version "0.4.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.4.6/veloctl_0.4.6_Darwin_arm64.tar.gz"
-      sha256 "38b9d26c40ed88cbdd6a5a671861cee9593c976a48a2e3d1129b3369a385fc1c"
+      url "https://releases.velocity.tech/veloctl/v0.4.7/veloctl_0.4.7_Darwin_arm64.tar.gz"
+      sha256 "84edfdf3d1f70e9cd930872b2f437f1b475dfa31e63fbf0bbd9d35ae3cd65d7d"
 
       def install
         bin.install "veloctl"
@@ -26,8 +26,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.4.6/veloctl_0.4.6_Darwin_x86_64.tar.gz"
-      sha256 "f01bee5bc22005ee7466d030ab4feaea49e358c47cf7bb02764d248e804498ed"
+      url "https://releases.velocity.tech/veloctl/v0.4.7/veloctl_0.4.7_Darwin_x86_64.tar.gz"
+      sha256 "50c879cb3ded714a1418b50f79a549f54344d511db2272cfbb04db6925459a18"
 
       def install
         bin.install "veloctl"
@@ -45,9 +45,9 @@ class Veloctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.4.6/veloctl_0.4.6_Linux_arm64.tar.gz"
-      sha256 "1d5d3c00bea4193852cc5231746e4ce2d6678a5e33733d6a347e3af5a58895ac"
+    if Hardware::CPU.intel?
+      url "https://releases.velocity.tech/veloctl/v0.4.7/veloctl_0.4.7_Linux_x86_64.tar.gz"
+      sha256 "1e0d7c94746c02dbc16f1f16d0ca7a3f80e7c3747fcfc4d08c793e5a2b30e7cd"
 
       def install
         bin.install "veloctl"
@@ -62,9 +62,9 @@ class Veloctl < Formula
         fish_completion.install "fish_completion.fish" => "veloctl.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.4.6/veloctl_0.4.6_Linux_x86_64.tar.gz"
-      sha256 "1ae4dbe110e9315a2db1b2cf7a8e2cc583fedc8d8a0a9a566a0af9036b19b91a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://releases.velocity.tech/veloctl/v0.4.7/veloctl_0.4.7_Linux_arm64.tar.gz"
+      sha256 "99554f549594d3ceab343dbd134c40f33d686a043307726d601f860d1e653aa9"
 
       def install
         bin.install "veloctl"
