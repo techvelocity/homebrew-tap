@@ -5,12 +5,12 @@
 class Veloctl < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.5.3"
+  version "0.5.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/veloctl/v0.5.3/veloctl_0.5.3_Darwin_arm64.tar.gz"
-      sha256 "44549576ddd5ce80354fce92199414375c2345a65475b6b9a5ff9b36d1dbbe4d"
+    if Hardware::CPU.intel?
+      url "https://releases.velocity.tech/veloctl/v0.5.4/veloctl_0.5.4_Darwin_x86_64.tar.gz"
+      sha256 "918b548229662b65fb817f7495c8b4cdf800aadc63340e1e853c6efcb4f641a2"
 
       def install
         bin.install "veloctl"
@@ -25,9 +25,9 @@ class Veloctl < Formula
         fish_completion.install "fish_completion.fish" => "veloctl.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.5.3/veloctl_0.5.3_Darwin_x86_64.tar.gz"
-      sha256 "27db11d6552d5f40fc84b1cd46a2fa3191c76650f4f505fbdd73d957918df33b"
+    if Hardware::CPU.arm?
+      url "https://releases.velocity.tech/veloctl/v0.5.4/veloctl_0.5.4_Darwin_arm64.tar.gz"
+      sha256 "596866639fabddd77c5536814a8745d22311bd15fa22966d684f080522ebc578"
 
       def install
         bin.install "veloctl"
@@ -46,8 +46,8 @@ class Veloctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/veloctl/v0.5.3/veloctl_0.5.3_Linux_arm64.tar.gz"
-      sha256 "baad9f4d38f4a842626186229a2413e760f1a26045ad16d3848fc451661cb2e0"
+      url "https://releases.velocity.tech/veloctl/v0.5.4/veloctl_0.5.4_Linux_arm64.tar.gz"
+      sha256 "76442991bd3252b64061edcb5356fdc45279bf8bf7895ac680e6ff8554c77d7b"
 
       def install
         bin.install "veloctl"
@@ -63,8 +63,8 @@ class Veloctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/veloctl/v0.5.3/veloctl_0.5.3_Linux_x86_64.tar.gz"
-      sha256 "6c453dbfc3a202832869228cb02cad002cc114a858c38b85229a5e0e9f68ce00"
+      url "https://releases.velocity.tech/veloctl/v0.5.4/veloctl_0.5.4_Linux_x86_64.tar.gz"
+      sha256 "831a249bada493ecca12da58e23ed11850c9be5e27bfb633c0e33fb411db0507"
 
       def install
         bin.install "veloctl"
