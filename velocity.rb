@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.0.1-rc9"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.0.1-rc9/velocity_Darwin_x86_64.tar.gz"
-      sha256 "a041c4545f9e5f02a9ce7b9d0c39ad5d191bce49da1d657cf17b5811bf7801d6"
+      url "https://releases.velocity.tech/velocity/v0.1.0/velocity_Darwin_x86_64.tar.gz"
+      sha256 "e2973f1740bd6b4f17f85b2207af7e96c05e507fe60b27c7510a5b7131a25121"
 
       def install
         bin.install "velocity"
@@ -26,8 +26,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.0.1-rc9/velocity_Darwin_arm64.tar.gz"
-      sha256 "323573e4e766d043571f97e630f4e0adbdb5290da701be3ff2de4c68311ece42"
+      url "https://releases.velocity.tech/velocity/v0.1.0/velocity_Darwin_arm64.tar.gz"
+      sha256 "258c5f0f33f1bc61843a5ee04ddbfb595e405500ef7bd896913868b998866a77"
 
       def install
         bin.install "velocity"
@@ -46,8 +46,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.0.1-rc9/velocity_Linux_arm64.tar.gz"
-      sha256 "9adcce5840fba74b68f8b5660ec36d0115df079b5defc4cfebbd1f067048c83a"
+      url "https://releases.velocity.tech/velocity/v0.1.0/velocity_Linux_arm64.tar.gz"
+      sha256 "05f012ad53b4754e149f2dded62c46293be25ef4ddc5a0361ea7d8caf5f4d1a9"
 
       def install
         bin.install "velocity"
@@ -63,8 +63,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.0.1-rc9/velocity_Linux_x86_64.tar.gz"
-      sha256 "248d75dea5bc17d8e62e7e47b5d80c5e44243ea3cac1d61b29de3242a146879e"
+      url "https://releases.velocity.tech/velocity/v0.1.0/velocity_Linux_x86_64.tar.gz"
+      sha256 "157750c319fcc8e582b457cadff432ae3d3ed2a27cb11b4b563f2042735fce20"
 
       def install
         bin.install "velocity"
