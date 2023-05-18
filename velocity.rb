@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.2.0/velocity_Darwin_x86_64.tar.gz"
-      sha256 "92e9a4da5f813ebd4d0cfc33841d0fa46863579d7177718fc91d04cfcdc352fb"
+      url "https://releases.velocity.tech/velocity/v0.3.0/velocity_Darwin_x86_64.tar.gz"
+      sha256 "f2c4ec9f1c7952ad89884d0c8e0e8b4199be1f7b8cd25394da7617de213fed52"
 
       def install
         bin.install "velocity"
@@ -26,8 +26,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.2.0/velocity_Darwin_arm64.tar.gz"
-      sha256 "592d3e838a3dafcc37fcf819ed023a13c1b6695b10b530976aae5886481ae53f"
+      url "https://releases.velocity.tech/velocity/v0.3.0/velocity_Darwin_arm64.tar.gz"
+      sha256 "6c049aad3761d93ea3936145616ec3f2d7cad61eda9e4adc676c88716d08f01f"
 
       def install
         bin.install "velocity"
@@ -46,8 +46,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.2.0/velocity_Linux_arm64.tar.gz"
-      sha256 "b0ed90d17db1798e56518a75a331c76a300f8fe157dea09100714c817d4aa46b"
+      url "https://releases.velocity.tech/velocity/v0.3.0/velocity_Linux_arm64.tar.gz"
+      sha256 "90fc614449c758fe2583e60e360b40d0943080a6a54813551b1248a91119cc32"
 
       def install
         bin.install "velocity"
@@ -63,8 +63,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.2.0/velocity_Linux_x86_64.tar.gz"
-      sha256 "480307e6e98580d9fe993cab78f6e287b1fae876d076365d75c8fe9cd1017580"
+      url "https://releases.velocity.tech/velocity/v0.3.0/velocity_Linux_x86_64.tar.gz"
+      sha256 "a5fb526cd9a5cf61b547f41bae87f88b9043e94b35c89d172e50996851f97f8e"
 
       def install
         bin.install "velocity"
