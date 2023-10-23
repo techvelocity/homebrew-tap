@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.32.1"
+  version "0.33.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.32.1/velocity_Darwin_arm64.tar.gz"
-      sha256 "f76621a2f7e941f41521224174421454256d85d5a48a89fc0364a60433ef9b3e"
+      url "https://releases.velocity.tech/velocity/v0.33.0/velocity_Darwin_arm64.tar.gz"
+      sha256 "e21b99c6da689531caf92c505d6e957b3ef0b89b1a121add69a7984b9f238d3f"
 
       def install
         bin.install "velocity"
@@ -26,8 +26,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.32.1/velocity_Darwin_x86_64.tar.gz"
-      sha256 "53e4e2459b967205742d959592bf6a0ee6853cabe036be6b3294ccc1c63d07f2"
+      url "https://releases.velocity.tech/velocity/v0.33.0/velocity_Darwin_x86_64.tar.gz"
+      sha256 "b69644cc8f1a7bec268e49bde2cf63add669fd55c15eb94efcd19b140ba9429b"
 
       def install
         bin.install "velocity"
@@ -46,8 +46,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.32.1/velocity_Linux_arm64.tar.gz"
-      sha256 "80d84ca41f63c10afbd5f7778869b2bbb06cfa866f6aef059222d004046ec20a"
+      url "https://releases.velocity.tech/velocity/v0.33.0/velocity_Linux_arm64.tar.gz"
+      sha256 "9375c85595f567bbdfa998776ae039ed947d5a5f3e70a41a43aacc382717ec18"
 
       def install
         bin.install "velocity"
@@ -63,8 +63,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.32.1/velocity_Linux_x86_64.tar.gz"
-      sha256 "e124b9b2fbdb836f45d363cb10c03827bdfae2606d2c58dadca514bbb486822b"
+      url "https://releases.velocity.tech/velocity/v0.33.0/velocity_Linux_x86_64.tar.gz"
+      sha256 "2497b575056e03d730199c44fdb8950c3a76b4f2609e0be3af452231c31ebea7"
 
       def install
         bin.install "velocity"
