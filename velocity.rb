@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.43.0-port-forward-alpha"
+  version "0.43.0-port-forward-alpha-2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha/velocity_Darwin_arm64.tar.gz"
-      sha256 "840acf4392fbe515b46dc221bf8509feb2a1526c5a904230b9117710dba958f0"
+      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha-2/velocity_Darwin_arm64.tar.gz"
+      sha256 "fd49d688f2f6a76a9407c272b995cc3ea54ae14de3b12623545fb56f1b412976"
 
       def install
         bin.install "velocity"
@@ -26,8 +26,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha/velocity_Darwin_x86_64.tar.gz"
-      sha256 "2379de0cbf55d05332424a419e74c3ac0d7961e11468f4245ee62af23f44d126"
+      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha-2/velocity_Darwin_x86_64.tar.gz"
+      sha256 "f8b7619899078812efa32a9e58e4885f28719bc3de6778338fab6102dd2717e4"
 
       def install
         bin.install "velocity"
@@ -46,8 +46,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha/velocity_Linux_arm64.tar.gz"
-      sha256 "d0ba67a30c2f676b5717a7418ea272ebcffd2a99c337c78cec89c89c3d86723a"
+      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha-2/velocity_Linux_arm64.tar.gz"
+      sha256 "01df9ee8811c1544f296937618ad461fef5b157fbac899b7f0637b3b05ff38ee"
 
       def install
         bin.install "velocity"
@@ -63,8 +63,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha/velocity_Linux_x86_64.tar.gz"
-      sha256 "d7dd3697d13d45861c691ef932166e1f8828b69309a96b4e536b01c98e558a5c"
+      url "https://releases.velocity.tech/velocity/v0.43.0-port-forward-alpha-2/velocity_Linux_x86_64.tar.gz"
+      sha256 "7bc3c65c6e9646af54432d2faa019d949cab19acb2aa3707ae658154f2fea4aa"
 
       def install
         bin.install "velocity"
