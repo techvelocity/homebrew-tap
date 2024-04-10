@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.58.0-20240410062216-9ca18745"
+  version "0.59.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.58.0-20240410062216-9ca18745/velocity_Darwin_x86_64.tar.gz"
-      sha256 "620d2a99351dbc79c981c9dce281ec653afaf94301fba951ee08c47ba774ad88"
+      url "https://releases.velocity.tech/velocity/v0.59.0/velocity_Darwin_x86_64.tar.gz"
+      sha256 "b7a584ac62b752001e1588bc3b699a69de154583556c33e27ecf231b2f90160f"
 
       def install
         bin.install "velocity"
@@ -26,8 +26,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.58.0-20240410062216-9ca18745/velocity_Darwin_arm64.tar.gz"
-      sha256 "e1eb7fdfd050200f649f7793f820dbbeaf591faec9c99e3c888bc5571f961666"
+      url "https://releases.velocity.tech/velocity/v0.59.0/velocity_Darwin_arm64.tar.gz"
+      sha256 "e2322cb31aa83eed6a4af7117f0e4f9251f6572321ac8fd85075b1073b58712f"
 
       def install
         bin.install "velocity"
@@ -46,8 +46,8 @@ class Velocity < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.58.0-20240410062216-9ca18745/velocity_Linux_x86_64.tar.gz"
-      sha256 "6c27d46a19606a8e215fd8944fcdf6bfe6fe5ce85940f78af4781ff2cba41830"
+      url "https://releases.velocity.tech/velocity/v0.59.0/velocity_Linux_x86_64.tar.gz"
+      sha256 "7c701ff4e1131ba74ca4e70e18832b86c4f7eceec3d1b482955a686380819cd1"
 
       def install
         bin.install "velocity"
@@ -63,8 +63,8 @@ class Velocity < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.58.0-20240410062216-9ca18745/velocity_Linux_arm64.tar.gz"
-      sha256 "4914b05aafe70dc8266c94cf291fe2ebfc4e08fe98556131942a391c51f845b7"
+      url "https://releases.velocity.tech/velocity/v0.59.0/velocity_Linux_arm64.tar.gz"
+      sha256 "a1c0ebfcfe192f79b8e0bf595b61841956c4fd105b1987e8ae9a5a4f9987ffc6"
 
       def install
         bin.install "velocity"
