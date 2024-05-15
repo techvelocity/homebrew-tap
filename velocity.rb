@@ -5,12 +5,12 @@
 class Velocity < Formula
   desc ""
   homepage "https://velocity.tech"
-  version "0.65.0-20240512144259-7435a302"
+  version "0.65.0-20240515093201-e1d05325"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.65.0-20240512144259-7435a302/velocity_Darwin_x86_64.tar.gz"
-      sha256 "edd89137f1d44418c06503aa9cc3679cee330d70e60738e4ff4d0462236fbc4d"
+    on_intel do
+      url "https://releases.velocity.tech/velocity/v0.65.0-20240515093201-e1d05325/velocity_Darwin_x86_64.tar.gz"
+      sha256 "50f37a157db6a5f035be7100a303f6f09b50df5364e3b6382624174ff80a269c"
 
       def install
         bin.install "velocity"
@@ -25,9 +25,9 @@ class Velocity < Formula
         fish_completion.install "fish_completion.fish" => "velocity.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://releases.velocity.tech/velocity/v0.65.0-20240512144259-7435a302/velocity_Darwin_arm64.tar.gz"
-      sha256 "25d65ae933c500484aedb8bfe19e2fd962853b0dc8fd53fd933e52c956439668"
+    on_arm do
+      url "https://releases.velocity.tech/velocity/v0.65.0-20240515093201-e1d05325/velocity_Darwin_arm64.tar.gz"
+      sha256 "e77bbfd2054896de2cbe494eaa2249e9d2200fa312b208777e31ce83f0b12abd"
 
       def install
         bin.install "velocity"
@@ -45,38 +45,42 @@ class Velocity < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://releases.velocity.tech/velocity/v0.65.0-20240512144259-7435a302/velocity_Linux_x86_64.tar.gz"
-      sha256 "fe5af7f0e3ee8faf60bdcc0781682f49bfe3072763c7ede74a84def409f86a4e"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://releases.velocity.tech/velocity/v0.65.0-20240515093201-e1d05325/velocity_Linux_x86_64.tar.gz"
+        sha256 "59259c5907fbb73617de8ff39b0e5939d7ea88e9ad0042466244ebb05fda7097"
 
-      def install
-        bin.install "velocity"
+        def install
+          bin.install "velocity"
 
-        system bin/"velocity completion bash > bash_completion.bash"
-        bash_completion.install "bash_completion.bash" => "velocity"
+          system bin/"velocity completion bash > bash_completion.bash"
+          bash_completion.install "bash_completion.bash" => "velocity"
 
-        system bin/"velocity completion zsh > zsh_completion.zsh"
-        zsh_completion.install "zsh_completion.zsh" => "_velocity"
+          system bin/"velocity completion zsh > zsh_completion.zsh"
+          zsh_completion.install "zsh_completion.zsh" => "_velocity"
 
-        system bin/"velocity completion fish > fish_completion.fish"
-        fish_completion.install "fish_completion.fish" => "velocity.fish"
+          system bin/"velocity completion fish > fish_completion.fish"
+          fish_completion.install "fish_completion.fish" => "velocity.fish"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.velocity.tech/velocity/v0.65.0-20240512144259-7435a302/velocity_Linux_arm64.tar.gz"
-      sha256 "31d3820bad907eb6adbe6c485e46a7407e6989a7dcd643db59ae1272a85c0175"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://releases.velocity.tech/velocity/v0.65.0-20240515093201-e1d05325/velocity_Linux_arm64.tar.gz"
+        sha256 "638965706f445dd6541615d7b64a75f002792b16cd433955a8ee0251150fe106"
 
-      def install
-        bin.install "velocity"
+        def install
+          bin.install "velocity"
 
-        system bin/"velocity completion bash > bash_completion.bash"
-        bash_completion.install "bash_completion.bash" => "velocity"
+          system bin/"velocity completion bash > bash_completion.bash"
+          bash_completion.install "bash_completion.bash" => "velocity"
 
-        system bin/"velocity completion zsh > zsh_completion.zsh"
-        zsh_completion.install "zsh_completion.zsh" => "_velocity"
+          system bin/"velocity completion zsh > zsh_completion.zsh"
+          zsh_completion.install "zsh_completion.zsh" => "_velocity"
 
-        system bin/"velocity completion fish > fish_completion.fish"
-        fish_completion.install "fish_completion.fish" => "velocity.fish"
+          system bin/"velocity completion fish > fish_completion.fish"
+          fish_completion.install "fish_completion.fish" => "velocity.fish"
+        end
       end
     end
   end
